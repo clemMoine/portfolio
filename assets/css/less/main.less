@@ -1,0 +1,144 @@
+@import url('./reset.css');   // Reset
+@import url('./fonts.less');  // Polices
+@import url('./colors.less'); // Couleurs
+@import url('./images.less'); // Images
+@import url('./mixins.less'); // Mixins
+
+// Général
+
+body {
+  font-family: @font;
+  // color: @white;
+  font-weight: @font-weight;
+
+  // background-color: @purple;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  .appearance(none);
+  font-size: 1em;
+  border: 1px solid @white;
+  .border-radius(3px);
+  .padding-vertical(.5em);
+  .padding-horizontal(1em);
+  background: transparent;
+  color: @white;
+
+  &:hover {
+    background: @white;
+    color: @purple;
+    cursor: pointer;
+  }
+}
+
+nav {
+  .flex-display;
+  .flex(1);
+  color: @white;
+  background-color: fade(@blue-light, 70%);
+
+  ul {
+    .flex-display;
+    .flex(1);
+    .flex-direction(row);
+    .align-items(center);
+    .wrapper;
+
+    li {
+      text-transform: uppercase;
+
+      a {
+        .flex-display;
+        .align-items(center);
+        height: 60px;
+        .padding-horizontal(15px);
+
+        &:hover, a.active {
+          color: @yellow;
+          box-shadow: inset 0 -5px 0 @yellow;
+        }
+      }
+    }
+  }
+}
+
+// Header
+header {
+  .flex-display;
+  .align-items(center);
+  .justify-content(center);
+  .flex-direction(column);
+  height: 100vh;
+  color: @white;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    .radial-gradient(@purple, @blue);
+    z-index: -1;
+    .opacity(.8);
+  }
+
+  &:after {
+    background-image: @header-background;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  h1 {
+    .flex-display;
+    .align-items(center);
+    .flex-direction(column);
+    font-size: 5em;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: .45em;
+      font-weight: initial;
+      text-transform: uppercase;
+      color: @yellow;
+    }
+  }
+
+  img.scroll-info {
+    position: absolute;
+    bottom: 2em;
+  }
+}
+
+// Main
+main {
+  section {
+    .wrapper;
+    
+    h2 {
+      display: none;
+    }
+  }
+}
