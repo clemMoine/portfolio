@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang='fr' ng-app>
 <head>
+  <title>Clément MOINE - Porfolio</title>
   <meta charset='utf-8'>
-  <title>Document</title>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
 
   <!-- Fichiers de scripts Javascript -->
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
@@ -11,16 +13,17 @@
   <!-- Feuilles de styles CSS -->
   <link type='text/css' rel='stylesheet' href='./assets/css/main.css'>
 </head>
-<body>
+<body itemscope itemtype='http://schema.org/WebPage'>
+
   <!-- Header -->
-  <header>
-    <nav>
+  <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+    <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
       <ul>
-        <li><a href='#' translate>Accueil</a></li>
-        <li><a href='#presentation' translate>Présentation</a></li>
-        <li><a href='#skills' translate>Compétences</a></li>
-        <li><a href='#projects' translate>Travaux</a></li>
-        <li><a href='#contact' translate>Contact</a></li>
+        <li><a itemprop='url' href='#' translate><span itemprop='name'>Accueil</span></a></li>
+        <li><a itemprop='url' href='#presentation' translate><span itemprop='name'>Présentation</span></a></li>
+        <li><a itemprop='url' href='#skills' translate><span itemprop='name'>Compétences</span></a></li>
+        <li><a itemprop='url' href='#projects' translate><span itemprop='name'>Travaux</span></a></li>
+        <li><a itemprop='url' href='#contact' translate><span itemprop='name'>Contact</span></a></li>
       </ul>
     </nav>
     <h1><span>Bonjour, je suis</span> Clément MOINE</h1>
@@ -29,67 +32,92 @@
   </header>
 
   <!-- Main -->
-  <main>
-    <section id='presentation'>
-      <h2 translate>Présentation</h2>
-      <h3 translate>Clément MOINE</h3>
-      <h4 translate>Développeur Full Stack - Graphiste</h4>
-      <p translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam tenetur modi cum laudantium illo natus dolor illum. Modi hic explicabo tempora, officia repudiandae porro repellat. Doloribus quos debitis animi!</p>
-      <img src='./assets/images/.png' title='Photographie Clément MOINE &copy; 2017' alt='Clément MOINE'>
+  <main role='main' itemscope itemprop='mainContentOfPage'>
+    <section id='presentation' class='presentation'>
+      <article>
+        <h2 translate>Présentation</h2>
+        <div class='details'>
+          <h3 translate>Clément MOINE</h3>
+          <h4 translate>Développeur Full Stack - Graphiste</h4>
+          <p translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam tenetur modi cum laudantium illo natus dolor illum. Modi hic explicabo tempora, officia repudiandae porro repellat. Doloribus quos debitis animi!</p>
+        </div>
+        <img src='./assets/images/clement.png' title='Photographie Clément MOINE &copy; 2017' alt='Clément MOINE'>
+      </article>
     </section>
 
-    <section id='skills'>
-      <h2 translate>Compétences</h2>
-      <ul>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Microphone">
-          <h3>Communication</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates sint tempora quasi quibusdam harum. Tenetur hic, laborum fuga. Libero fugit ratione eligendi quaerat voluptatibus culpa consequuntur a distinctio. Mollitia.</p>
-        </li>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Crayon">
-          <h3>Graphisme</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem officiis vel temporibus. Dolorem quas fuga natus voluptatibus magni recusandae neque quo ducimus fugit eum, soluta nobis autem, error dolores non.</p>
-        </li>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Rouages">
-          <h3>Développement Mobile</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nihil et, officiis aspernatur illo in rem suscipit laborum quae alias ipsam minus eveniet aliquid facilis nam accusamus quidem expedita maxime.</p>
-        </li>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Processeur">
-          <h3>Électronique</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quo alias perspiciatis quia ipsam pariatur nisi impedit sed porro suscipit ad, illum magni fugiat mollitia, aspernatur fugit maiores natus et.</p>
-        </li>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Puzzle">
-          <h3>Développement Web</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cumque cum sapiente libero, dolorem quaerat earum quam aut, hic quidem dolore rerum magnam doloremque incidunt laudantium soluta fugiat repellendus placeat!</p>
-        </li>
-        <li>
-          <img src="./assets/images/.png" alt="Icone Serveurs">
-          <h3>Systèmes et réseaux</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde illum autem deserunt laborum nam repellat accusantium incidunt nobis alias est quos, ex atque fuga magni iste consequuntur necessitatibus facere enim!</p>
-        </li>
-      </ul>
+    <section id='skills' class='skills'>
+      <article>
+        <h2 translate>Compétences</h2>
+        <ul>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/microphone.png' alt='Icone Microphone &copy; Freepik'>
+              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Communication</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates sint tempora quasi quibusdam harum. Tenetur hic, laborum fuga. Libero fugit ratione eligendi quaerat voluptatibus culpa consequuntur a distinctio. Mollitia.</p>
+          </li>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/pen.png' alt='Icone Crayon &copy; Freepik'>
+              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Graphisme</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem officiis vel temporibus. Dolorem quas fuga natus voluptatibus magni recusandae neque quo ducimus fugit eum, soluta nobis autem, error dolores non.</p>
+          </li>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/gears.png' alt='Icone Rouages &copy; Vectors Market'>
+              <figcaption>Icons made by <a href='http://www.flaticon.com/authors/vectors-market' title='Vectors Market'>Vectors Market</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Développement Mobile</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nihil et, officiis aspernatur illo in rem suscipit laborum quae alias ipsam minus eveniet aliquid facilis nam accusamus quidem expedita maxime.</p>
+          </li>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/chip.png' alt='Icone Processeur &copy; Freepik'>
+              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Électronique</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quo alias perspiciatis quia ipsam pariatur nisi impedit sed porro suscipit ad, illum magni fugiat mollitia, aspernatur fugit maiores natus et.</p>
+          </li>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/puzzle.png' alt='Icone Puzzle &copy; Freepik'>
+              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Développement Web</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cumque cum sapiente libero, dolorem quaerat earum quam aut, hic quidem dolore rerum magnam doloremque incidunt laudantium soluta fugiat repellendus placeat!</p>
+          </li>
+          <li>
+            <figure>
+              <img src='./assets/images/icons/servers.png' alt='Icone Serveurs &copy; Madebyoliver'>
+              <figcaption>Icons made by <a href='http://www.flaticon.com/authors/madebyoliver' title='Madebyoliver'>Madebyoliver</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Systèmes et réseaux</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde illum autem deserunt laborum nam repellat accusantium incidunt nobis alias est quos, ex atque fuga magni iste consequuntur necessitatibus facere enim!</p>
+          </li>
+        </ul>
+      </article>
     </section>
-    <section id='projects'></section>
+
+    <section id='projects' class='projects'></section>
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
     <p translate>Une question, envie de discuter ?</p>
-    <button translate>Contactez-moi</a>
-    <button translate>Curriculum Vitae</a>
+    <button translate>Contactez-moi</button>
+    <button translate>Curriculum Vitae</button>
     <section id='contact'>
-      <nav>
+      <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
         <ul>
-          <li><a href='#' translate>Twitter</a></li>
-          <li><a href='#' translate>Facebook</a></li>
-          <li><a href='#' translate>LinkedIn</a></li>
-          <li><a href='#' translate>Curriculum Vitae</a></li>
-          <li><a href='#' translate>GitHub</a></li>
-          <li><a href='#' translate>YouTube</a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>Twitter</span></a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>Facebook</span></a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>LinkedIn</span></a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>Curriculum Vitae</span></a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>GitHub</span></a></li>
+          <li><a itemprop='url' href='#' translate><span itemprop='name'>YouTube</span></a></li>
         </ul>
       </nav>
     </section>
