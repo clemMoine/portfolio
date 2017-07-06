@@ -22,9 +22,11 @@ a {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  .padding-horizontal(1em);
 }
 
-button {
+a.button, button {
+  font-family: inherit;
   .appearance(none);
   font-size: 1em;
   border: 1px solid @white;
@@ -38,6 +40,16 @@ button {
     background: @white;
     color: @purple;
     cursor: pointer;
+  }
+
+  &.purple {
+    border-color: @purple;
+    color: @purple;
+
+    &:hover {
+      background: @purple;
+      color: @white;
+    }
   }
 }
 
@@ -65,8 +77,11 @@ nav {
         height: 60px;
         .padding-horizontal(15px);
 
-        &:hover, a.active {
+        &:hover, &.active {
           color: @yellow;
+        }
+
+        &[href]:hover {          
           box-shadow: inset 0 -5px 0 @yellow;
         }
       }
@@ -96,7 +111,7 @@ header {
   }
 
   &:before {
-    .radial-gradient(@purple, @blue);
+    .radial-gradient(@purple, @blue, top right);
     z-index: -1;
     .opacity(.8);
   }
@@ -120,11 +135,12 @@ header {
     .flex-display;
     .align-items(center);
     .flex-direction(column);
-    font-size: 5em;
+    font-size: 4em;
     font-weight: lighter;
     margin-bottom: 2rem;
 
     span {
+      margin-bottom: 1rem;
       font-size: .45em;
       font-weight: initial;
       text-transform: uppercase;
@@ -132,10 +148,15 @@ header {
     }
   }
 
+  button.menu {
+    display: none;
+  }
+
   img.scroll-info {
     .align-self(center);
     margin: 0 auto;
     position: absolute;
+    height: 3em;
     bottom: 2em;
     left: 0;
     right: 0;
@@ -177,7 +198,7 @@ main {
         .flex-display;
         .flex-direction(column);
         .justify-content(center);
-        padding-right: 2em;
+        margin-right: 2em;
       }
 
       img {
@@ -264,9 +285,11 @@ footer {
   .align-items(center);
   .justify-content(center);
   .flex-direction(column);
+  box-sizing: border-box;
   position: relative;
   color: @white;
   min-height: 600px;
+  padding-bottom: 60px;
 
   p {
     margin-bottom: 3em;
@@ -290,7 +313,13 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 98;
+
+    li {
+      span.icon {
+        display: none;
+      }
+    }
   }
 
   &:before {
@@ -307,3 +336,5 @@ footer {
     z-index: -2;
   }
 }
+
+@import url('./mediaqueries.less'); // Mediaqueries

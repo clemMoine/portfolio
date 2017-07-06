@@ -6,9 +6,17 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+  <!-- Couleurs navigateur -->
+  <meta name="msapplication-TileColor" content="#2f2d3a">
+  <meta name="theme-color" content="#2f2d3a">
+  <meta name="msapplication-navbutton-color" content="#2f2d3a">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2f2d3a">
+
   <!-- Fichiers de scripts Javascript -->
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
   <!--[if lt IE 9]><script src='https://cdn.jsdelivr.net/g/respond@1.4.2,html5shiv@3.7.3'></script><![endif]-->
+  <script src='./assets/javascript/main.js'></script>
 
   <!-- Feuilles de styles CSS -->
   <link type='text/css' rel='stylesheet' href='./assets/css/main.css'>
@@ -16,18 +24,20 @@
 <body itemscope itemtype='http://schema.org/WebPage'>
 
   <!-- Header -->
-  <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+  <header role='banner' itemscope itemtype='http://schema.org/WPHeader'>
     <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
       <ul>
-        <li><a itemprop='url' href='#' translate><span itemprop='name'>Accueil</span></a></li>
-        <li><a itemprop='url' href='#presentation' translate><span itemprop='name'>Présentation</span></a></li>
-        <li><a itemprop='url' href='#skills' translate><span itemprop='name'>Compétences</span></a></li>
-        <li><a itemprop='url' href='#projects' translate><span itemprop='name'>Travaux</span></a></li>
-        <li><a itemprop='url' href='#contact' translate><span itemprop='name'>Contact</span></a></li>
+        <li><a data-smooth='true' itemprop='url' href='#' class='active' translate><span itemprop='name'>Accueil</span></a></li>
+        <li><a data-smooth='true' itemprop='url' href='#presentation' translate><span itemprop='name'>Présentation</span></a></li>
+        <li><a data-smooth='true' itemprop='url' href='#skills' translate><span itemprop='name'>Compétences</span></a></li>
+        <li><a data-smooth='true' itemprop='url' href='#projects' translate><span itemprop='name'>Travaux</span></a></li>
+        <li><a data-smooth='true' itemprop='url' href='#contact' translate><span itemprop='name'>Contact</span></a></li>
       </ul>
     </nav>
+    <div class="overlay"></div>
+    <button class='menu'><i class='fa fa-bars' aria-hidden='true'></i></button>
     <h1><span>Bonjour, je suis</span> Clément MOINE</h1>
-    <button translate>Découvrez-moi</button>
+    <a data-smooth='true' class='button' href='#presentation' translate>Découvrez-moi</a>
     <img class='scroll-info' src='./assets/images/mouse.svg' title='Défilez pour commencer' alt='Bouton de scroll' />
   </header>
 
@@ -105,22 +115,46 @@
   </main>
 
   <!-- Footer -->
-  <footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+  <footer role='contentinfo' itemscope itemtype='http://schema.org/WPFooter'>
     <p translate>Une question, envie de discuter ?</p>
     <button translate>Contactez-moi</button>
     <button translate>Curriculum Vitae</button>
     <section id='contact'>
-      <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
-        <ul>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>Twitter</span></a></li>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>Facebook</span></a></li>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>LinkedIn</span></a></li>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>Curriculum Vitae</span></a></li>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>GitHub</span></a></li>
-          <li><a itemprop='url' href='#' translate><span itemprop='name'>YouTube</span></a></li>
-        </ul>
-      </nav>
     </section>
+    <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
+      <ul>
+        <li>
+          <a itemprop='url' href='https://twitter.com/mrtheinsane' translate>
+            <span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+            <span itemprop='name'>Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a itemprop='url' href='https://www.facebook.com/cmoine86' translate>
+            <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+            <span itemprop='name'>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a itemprop='url' href='http://fr.linkedin.com/in/clemmoine' translate>
+            <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+            <span itemprop='name'>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a itemprop='url' href='https://github.com/clemMoine' translate>
+            <span class="icon"><i class="fa fa-github-alt" aria-hidden="true"></i></span>
+            <span itemprop='name'>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a itemprop='url' href='https://www.youtube.com/user/MisterTheInsane' translate>
+            <span class="icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+            <span itemprop='name'>YouTube</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </footer>
 </body>
 </html>
