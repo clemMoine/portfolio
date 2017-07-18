@@ -1,8 +1,13 @@
+// Langue locale du navigateur
+const locale = navigator.language || navigator.userLanguage;
+
 // Lorsque le document est chargé
 jQuery(document).ready(function() {
   mobileMenu();
   heightHeader();
   smoothScroll();
+  sinceDate();
+  popup();
 });
 
 // Lors du redimensionnement de la fenêtre
@@ -77,5 +82,53 @@ function menuButtonColor() {
   } else {
     $('button.menu').removeClass('purple');
   }
+}
 
+/**
+ * Permet de transformer une date en "ago" (ex: 03/04/2017 > 2 ans)
+**/
+function sinceDate() {
+  // Changement de la locale pour correspondre à la langue du navigateur
+  moment.locale(locale);
+
+  $('[data-since]').each(function(index, element) {
+    const since = $(element).data('since');
+    const date = moment(since, 'DD-MM-YYYY');
+    const agoDate = date.fromNow(true);
+    $(element).text(agoDate);
+  });
+}
+
+/**
+ * Permet d'afficher des popups
+**/
+function popup() {
+  $('[data-popup]').on('click', function() {
+    // Popup cible
+    let popup = $(this).next('.popup');
+
+    // Ouvre la popup
+    popup.toggleClass('active');
+
+    // Insertion du src pour charger uniquement si l'on ouvre la popup
+    $('iframe', popup).each(function(index, element) {
+      $(this).attr('src', $(this).data('src'));
+    });
+  });
+
+  $('.popup button.close, .popup').on('click', function(e) {
+    let target = $(e.target);
+    if (target.hasClass('popup') || target.hasClass('close')) {
+      let popup = $(target.closest('.popup'));
+
+      popup.removeClass('active');
+
+      // Suppression du src pour stopper le contenu de l'iframe
+      $('iframe', popup).each(function(index, element) {
+        $(this).removeAttr('src');
+        $(this).clone().appendTo($(this).closest('.fluid-container'));
+        $(this).remove();
+      });
+    }
+  })
 }

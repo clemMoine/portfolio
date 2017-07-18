@@ -12,12 +12,6 @@
   <meta name="msapplication-navbutton-color" content="#2f2d3a">
   <meta name="apple-mobile-web-app-status-bar-style" content="#2f2d3a">
 
-  <!-- Fichiers de scripts Javascript -->
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-  <!--[if lt IE 9]><script src='https://cdn.jsdelivr.net/g/respond@1.4.2,html5shiv@3.7.3'></script><![endif]-->
-  <script src='./assets/javascript/main.js'></script>
-
   <!-- Feuilles de styles CSS -->
   <link type='text/css' rel='stylesheet' href='./assets/css/main.css'>
 </head>
@@ -38,7 +32,9 @@
     <button class='menu'><i class='fa fa-bars' aria-hidden='true'></i></button>
     <h1><span>Bonjour, je suis</span> Clément MOINE</h1>
     <a data-smooth='true' class='button' href='#presentation' translate>Découvrez-moi</a>
-    <img class='scroll-info' src='./assets/images/mouse.svg' title='Défilez pour commencer' alt='Bouton de scroll' />
+    <a data-smooth='true' href='#presentation'>
+      <img class='scroll-info' src='./assets/images/mouse.svg' title='Défilez pour commencer' alt='Bouton de scroll' />
+    </a>
   </header>
 
   <!-- Main -->
@@ -48,8 +44,10 @@
         <h2 translate>Présentation</h2>
         <div class='details'>
           <h3 translate>Clément MOINE</h3>
-          <h4 translate>Développeur Full Stack - Graphiste</h4>
-          <p translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde magnam tenetur modi cum laudantium illo natus dolor illum. Modi hic explicabo tempora, officia repudiandae porro repellat. Doloribus quos debitis animi!</p>
+          <h4 translate>Développeur Full-Stack</h4>
+          <p translate>J'ai <span data-smooth='true' data-since='30/09/1996'>21 ans</span>, je suis <a data-smooth='true' href='#skills'>développeur</a>, <a data-smooth='true' href='#skills'>graphiste</a>, <a data-smooth='true' href='#skills'>dessinateur</a>, <a data-smooth='true' href='#skills'>graphiste</a>, <a data-smooth='true' href='#skills'>vidéaste</a> et <a data-smooth='true' href='#skills'>bien d'autres choses</a> !</p>
+          <p translate>Je me passionne pour beaucoup de choses, j'aime découvrir et faire découvrir.</p>
+          <p translate>Si vous me cherchiez, vous venez de me trouver et je suis enchanté de faire votre connaissance !</p>
         </div>
         <img src='./assets/images/clement.png' title='Photographie Clément MOINE &copy; 2017' alt='Clément MOINE'>
       </article>
@@ -61,19 +59,25 @@
         <ul>
           <li>
             <figure>
+              <img src='./assets/images/icons/puzzle.png' alt='Icone Puzzle &copy; Freepik'>
+              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
+            </figure>
+            <h3>Développement Web</h3>
+            <div class='content'>
+              <p>La <strong>rigueur</strong> et la <strong>sécurité</strong> sont mes priorités lorsque je code. Je maîtrise les langages, méthodes et technologies modernes du monde du Web. Étant autodidacte j'ai longtemps travaillé from-scratch, et n'ai utilisé jusqu'ici que très peu de frameworks ou plugins.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+          </li>
+          <li>
+            <figure>
               <img src='./assets/images/icons/microphone.png' alt='Icone Microphone &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Communication</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates sint tempora quasi quibusdam harum. Tenetur hic, laborum fuga. Libero fugit ratione eligendi quaerat voluptatibus culpa consequuntur a distinctio. Mollitia.</p>
-          </li>
-          <li>
-            <figure>
-              <img src='./assets/images/icons/pen.png' alt='Icone Crayon &copy; Freepik'>
-              <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
-            </figure>
-            <h3>Graphisme</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem officiis vel temporibus. Dolorem quas fuga natus voluptatibus magni recusandae neque quo ducimus fugit eum, soluta nobis autem, error dolores non.</p>
+            <div class='content'>
+              <p>Un don et une malédiction diront certains, je suis tout à fait à l'aise avec la communication orale, téléphonique ou même écrite, j'aime communiquer et partager avec autrui. Je le pratique en grande partie en vidéos publiées sur <a href='http://youtube.com/c/mrtheinsane'>YouTube</a>.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
           </li>
           <li>
             <figure>
@@ -81,7 +85,10 @@
               <figcaption>Icons made by <a href='http://www.flaticon.com/authors/vectors-market' title='Vectors Market'>Vectors Market</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Développement Mobile</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nihil et, officiis aspernatur illo in rem suscipit laborum quae alias ipsam minus eveniet aliquid facilis nam accusamus quidem expedita maxime.</p>
+            <div class='content'>
+              <p>Débutant dans ce domaine, je travaille dans ce domaine au sein de l'entreprise <a href='http://ubidreams.com/'><strong>Ubidreams</strong></a> depuis <span title='le 03 avril 2017' data-since='03/04/2017'>le 03 avril 2017</span> ou j'ai commencé comme stagiaire. Je suis formé aux <strong>technologies hybrides</strong> de React avec <a href='https://facebook.github.io/react-native/'><strong>React Native</strong></a> et <a href='https://facebook.github.io/react/'><strong>React JS</strong></a>.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
           </li>
           <li>
             <figure>
@@ -89,15 +96,21 @@
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Électronique</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quo alias perspiciatis quia ipsam pariatur nisi impedit sed porro suscipit ad, illum magni fugiat mollitia, aspernatur fugit maiores natus et.</p>
+            <div class='content'>
+              <p>J'ai toujours un <strong>tournevis</strong> dans la poche pour comprendre comment fonctionnent les choses. <strong>Démonter</strong>, <strong>nettoyer</strong>, <strong>réparer</strong> et <strong>entretenir</strong> de (vieux) appareils électroniques et informatiques est un passe temps pour moi, j'adore ça, malgré ma maladresse à qui je doit de belles blessures.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/puzzle.png' alt='Icone Puzzle &copy; Freepik'>
+              <img src='./assets/images/icons/pen.png' alt='Icone Crayon &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
-            <h3>Développement Web</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus cumque cum sapiente libero, dolorem quaerat earum quam aut, hic quidem dolore rerum magnam doloremque incidunt laudantium soluta fugiat repellendus placeat!</p>
+            <h3>Graphisme</h3>
+            <div class='content'>
+              <p>Je voulais être <strong>dessinateur</strong> quand je serai grand. Mon passe-temps d'enfance à évolué en <strong>activité infographique</strong>. Aujourd'hui, en pratiquant une <strong>veille régulière</strong>, je me tiens à proximité des <strong>innovations graphiques</strong>, me permettant ainsi de rester à la page et d'entretenir ma <strong>passion d'enfance</strong>.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
           </li>
           <li>
             <figure>
@@ -105,13 +118,150 @@
               <figcaption>Icons made by <a href='http://www.flaticon.com/authors/madebyoliver' title='Madebyoliver'>Madebyoliver</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Systèmes et réseaux</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde illum autem deserunt laborum nam repellat accusantium incidunt nobis alias est quos, ex atque fuga magni iste consequuntur necessitatibus facere enim!</p>
+            <div class='content'>
+              <p>Tout bon informaticien (incluant les développeurs) devraient connaître ses outils selon moi. J'ai, pendant 5 ans (BAC et BTS), suivi des études dans le domaine de la <strong>télécommunication</strong> et <strong>réseaux informatiques</strong>. J'ai donc de l'expérience et des compétences dans le domaine des <strong>serveurs</strong> et de la <strong>sécurité informatique</strong>.</p>
+            </div>
+            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
           </li>
         </ul>
       </article>
     </section>
 
-    <section id='projects' class='projects'></section>
+    <section id='projects' class='projects'>
+      <article>
+        <h2 translate>Compétences</h2>
+        <ul>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/diy_nds/thumb.jpg' alt='Nintendo DS'>
+              <figcaption>
+                <h3>Réparation d'une Nintendo DS Lite</h3>
+                <p>Vidéo de tutoriel en anglais</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>Do It Yourself - Réparer une Nintendo DS Lite</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content'>
+                <div class='fluid-container'>
+                  <iframe width="560" height="315" data-src="https://www.youtube.com/embed/w6Wd_wtrXdo?ecver=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Cette vidéo est un examen d'anglais à propos du concept de "Do It Yourself" ou comment faire des choses par soit-même. La règle de cet examen était d'avoir une vidéo d'une durée <strong>2:30 au maximum</strong> avec une <strong>prise de parole tout au long de la vidéo</strong>.</p>
+                <p>Dans cette vidéo, en anglais, je explique ainsi comment remplacer <strong>la coque cassée d'une Nintendo DS Lite</strong> par une neuve étapes par étapes.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/tetris_party/thumb.jpg' alt='Tetris Party'>
+              <figcaption>
+                <h3>Tetris Party</h3>
+                <p>Jeu de tetris fait en Canvas</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>Tetris Party - Jeu de Tetris en Canvas</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content'>
+                <div class='fluid-container'>
+                  <iframe width="560" height="315" data-src="./assets/javascript/tetris_party" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Tetris Party est un jeu que j'ai conçu lors de mon année en <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a> dans le cadre d'un examen. Il utilise le Canvas de HTML5 couplé à la bibliothèque CreateJS permettant de le manipuler facilement.</p>
+                <p>Les règles sont simples, remplissez un maximum la forme qui se trouve au fond pour gagner le plus de points et passez au niveau suivant.</p>
+                <p>Bien qu'il ne soit pas terminé, ce projet m'a permis de me faire la main sur Canvas HTML5.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/open_game/thumb.jpg' alt='Open Game'>
+              <figcaption>
+                <h3>Open Game</h3>
+                <p>L'actualité ouverte du jeu vidéo</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>Open Game - L'actualité ouverte du jeu vidéo</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content'>
+                <div class='fluid-container'>
+                  <iframe width="560" height="315" data-src="https://www.youtube.com/embed/J5Bflzi9FUk?ecver=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p>Open Game est un site sur lequel vous retrouverez l'univers vidéo-ludique par des aspects très divers au travers d'articles, news, tests et vidéos. C'est l'endroit où vous pourrez vous rendre pour vous informer, vous amuser et vous divertir !</p>
+                <p>Ce site est mon premier projet personnel dans le domaine du web que j'ai développé en apprenant de manière autodidacte sans le moindre framework ou base préconçue, il comporte une partie membres, un espace de commentaires, un créateur d'articles et un gestionnaire de messagerie interne.</p>
+                <p>Si la création d'un tel <strong>gestionnaire de contenu (CMS)</strong> m'a demandé du temps, il n'en reste pas moins un excellent point de départ dans le monde du web puisqu'il s'agit là du site qui m'a fait apprendre le <strong>HTML</strong>, le <strong>CSS</strong>, le <strong>Javascript</strong>, le <strong>SQL</strong> ainsi le <strong>PHP</strong>.</p>
+                <p><a href='http://openga.me' class='button purple'>Consulter le site</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/kaboom/thumb.jpg' alt='Kaboom Maroquinerie'>
+              <figcaption>
+                <h3>Kaboom Maroquinerie</h3>
+                <p>Site E-Commerce d'une artisane</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>Kaboom Maroquinerie - E-Commerce Maroquinerie</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content'>
+                <p>Ce site de E-Commerce a été l'un des deux projets confiés à mon équipe et moi-même dans le cadre des projets tuteurés de <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a>.</p>
+                <img class='mockup' src="./assets/images/projects/kaboom/mockup.png" alt="Mockup Kaboom">
+                <p><a href='http://www.kaboom-maroquinerie.fr/' class='button purple'>Consulter le site</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/my_tradeshow/thumb.jpg' alt='My Tradeshow'>
+              <figcaption>
+                <h3>My Tradeshow</h3>
+                <p>L'application de salons connectés</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>My Tradeshow - You will never doc alone</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content error'>
+                <p>Ce projet est en cours de réalisation et n'est à l'heure actuelle pas montrable.</p>
+                <p class="center"><img src="./assets/images/projects/my_tradeshow/sad.png" alt="Triste"></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <figure data-popup='true'>
+              <img src='./assets/images/projects/artchante/thumb.jpg' alt='ArtChante'>
+              <figcaption>
+                <h3>ArtChante</h3>
+                <p>Site de réservation de cours en ligne</p>
+              </figcaption>
+            </figure>
+            <div class='popup'>
+              <div class='header'>
+                <h3>ArtChanté - École de chant et piano</h3>
+                <button class='close'>Fermer</button>
+              </div>
+              <div class='content'>
+                <p>Ce site de E-Commerce a été l'un des deux projets confiés à mon équipe et moi-même dans le cadre des projets tuteurés de <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a>.</p>
+                <img class='mockup' src="./assets/images/projects/artchante/mockup.png" alt="Mockup ArtChante">
+                <p><a href='http://www.artchante.fr/' class='button purple'>Consulter le site</a></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -156,5 +306,13 @@
       </ul>
     </nav>
   </footer>
+
+  <!-- Fichiers de scripts Javascript -->
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment-with-locales.min.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+  <!--[if lt IE 9]><script src='https://cdn.jsdelivr.net/g/respond@1.4.2,html5shiv@3.7.3'></script><![endif]-->
+
+  <script src='./assets/javascript/main.js'></script>
 </body>
 </html>
