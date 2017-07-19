@@ -9,6 +9,7 @@ jQuery(document).ready(function() {
   sinceDate();
   popup();
   emailObfuscate();
+  swipeMenu();
 });
 
 // Lors du redimensionnement de la fenêtre
@@ -141,7 +142,6 @@ function popup() {
   })
 }
 
-
 /**
  * Permet des des-offusquer l'adresse e-mail et de la rendre lisible
 **/
@@ -149,5 +149,20 @@ function emailObfuscate() {
   $('a[href^="mailto:"]').each(function() {
     // Transforme les (at) en @ et les (dot) en .
     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+  });
+}
+
+/**
+ * Permet de fermer le menu en faisant glisser
+**/
+function swipeMenu() {
+  $('header nav').swipe({
+      swipeStatus:function(event, phase, direction, distance, duration, fingers)
+          {
+              if (phase=="move" && direction =="left") {
+                   $(this).removeClass("open");
+                   return false;
+              }
+          }
   });
 }
