@@ -50,7 +50,7 @@ function smoothScroll() {
   $('a[data-smooth]').click(function(e) {
     e.preventDefault();
 
-    let target = $(this).attr('href');
+    let target = this.getAttribute('href');
     target = (target == '#') ? 'body' : target;
     const offset = $(target).offset().top;
 
@@ -119,9 +119,9 @@ function popup() {
     // Ouvre la popup
     popup.toggleClass('active');
 
-    // Insertion du src pour charger uniquement si l'on ouvre la popup
-    $('iframe', popup).each(function(index, element) {
-      $(this).attr('src', $(this).data('src'));
+    // Insertion du data pour charger uniquement si l'on ouvre la popup
+    $('object', popup).each(function(index, element) {
+      $(this).attr('data', $(this).data('data'));
     });
   });
 
@@ -132,9 +132,9 @@ function popup() {
 
       popup.removeClass('active');
 
-      // Suppression du src pour stopper le contenu de l'iframe
-      $('iframe', popup).each(function(index, element) {
-        $(this).removeAttr('src');
+      // Suppression du data pour stopper le contenu de l'object
+      $('object', popup).each(function(index, element) {
+        $(this).removeAttr('data');
         $(this).clone().appendTo($(this).closest('.fluid-container'));
         $(this).remove();
       });

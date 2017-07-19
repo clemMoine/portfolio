@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang='fr'>
-<head>
+<head itemscope itemtype='http://schema.org/WebSite' prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#'>
   <title>Clément MOINE - Porfolio</title>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='keywords' content='portfolio, clement, moine, clément, developpeur, graphiste, dessinateur, videaste' />
   <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+  <meta property='og:description' name='description' content='Je suis développeur, graphiste, dessinateur, vidéaste et bien d&apos;autres choses ! Si vous me cherchiez, vous venez de me trouver !' />
+  <meta name='author' content='Clément MOINE' />
+  <meta name='copyright' content='&copy; Clément MOINE' />
+  <meta itemprop='creator' content='Clément MOINE'>
+  <link rel='alternate' href='http://cmoine.fr' hreflang='fr' />
   <link rel='icon' type='image/png' href='./assets/images/clement.png' />
+  <meta name='robots' content='index, follow'>
 
   <!-- Couleurs navigateur -->
   <meta name='msapplication-TileColor' content='#2f2d3a'>
   <meta name='theme-color' content='#2f2d3a'>
   <meta name='msapplication-navbutton-color' content='#2f2d3a'>
   <meta name='apple-mobile-web-app-status-bar-style' content='#2f2d3a'>
+
+  <!-- Balises META réseaux sociaux et indexation -->
+  <meta property='og:image' content='http://cmoine.fr/assets/images/clement.png' />
+  <link rel='image_src' href='http://cmoine.fr/assets/images/clement.png'>
+  <meta property='og:title' content='Portfolio' />
+  <meta property='og:url' content='http://cmoine.fr' />
+  <link rel='shortlink' href='http://cmoine.fr'>
+  <meta property='og:type' content='website' />
+  <meta property='twitter:card' content='summary' />
+  <meta property='twitter:title' content='Portfolio' />
+  <meta property='twitter:description' content='Je suis développeur, graphiste, dessinateur, vidéaste et bien d&apos;autres choses ! Si vous me cherchiez, vous venez de me trouver !' />
+  <meta property='twitter:image:src' content='http://cmoine.fr/assets/images/clement.png' />
+  <meta property='twitter:creator' content='mrtheinsane' />
+  <meta property='twitter:url' content='http://cmoine.fr' />
 
   <!-- Feuilles de styles CSS -->
   <link type='text/css' rel='stylesheet' href='./assets/css/main.css'>
@@ -22,18 +43,18 @@
   <header role='banner' itemscope itemtype='http://schema.org/WPHeader'>
     <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
       <ul>
-        <li><a data-smooth='true' itemprop='url' href='#' class='active'><span itemprop='name'>Accueil</span></a></li>
-        <li><a data-smooth='true' itemprop='url' href='#presentation'><span itemprop='name'>Présentation</span></a></li>
-        <li><a data-smooth='true' itemprop='url' href='#skills'><span itemprop='name'>Compétences</span></a></li>
-        <li><a data-smooth='true' itemprop='url' href='#projects'><span itemprop='name'>Travaux</span></a></li>
-        <li><a data-smooth='true' itemprop='url' href='#contact'><span itemprop='name'>Contact</span></a></li>
+        <li><a title='Accueil' data-smooth='true' itemprop='url' href='#' class='active'><span itemprop='name'>Accueil</span></a></li>
+        <li><a title='Présentation' data-smooth='true' itemprop='url' href='#presentation'><span itemprop='name'>Présentation</span></a></li>
+        <li><a title='Compétences' data-smooth='true' itemprop='url' href='#skills'><span itemprop='name'>Compétences</span></a></li>
+        <li><a title='Travaux' data-smooth='true' itemprop='url' href='#projects'><span itemprop='name'>Travaux</span></a></li>
+        <li><a title='Contact' data-smooth='true' itemprop='url' href='#contact'><span itemprop='name'>Contact</span></a></li>
       </ul>
     </nav>
     <div class='overlay'></div>
     <button class='menu'><i class='fa fa-bars' aria-hidden='true'></i></button>
     <h1><span>Bonjour, je suis</span> Clément MOINE</h1>
-    <a data-smooth='true' class='button' href='#presentation'>Découvrez-moi</a>
-    <a data-smooth='true' href='#presentation'>
+    <a title='Découvrez-moi' data-smooth='true' class='button' href='#presentation'>Découvrez-moi</a>
+    <a title='Défilez pour commencer' data-smooth='true' href='#presentation'>
       <img class='scroll-info' src='./assets/images/mouse.svg' title='Défilez pour commencer' alt='Bouton de scroll' />
     </a>
   </header>
@@ -60,69 +81,69 @@
         <ul>
           <li>
             <figure>
-              <img src='./assets/images/icons/puzzle.png' alt='Icone Puzzle &copy; Freepik'>
+              <img src='./assets/images/icons/puzzle.png' alt='Icone Puzzle &copy; Freepik' title='Icone Puzzle &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Développement Web</h3>
             <div class='content'>
               <p>Je maîtrise les langages, méthodes et technologies modernes du monde du Web. Cela dit, étant autodidacte j'ai longtemps travaillé from-scratch et n'ai utilisé jusqu'ici que très peu de frameworks, plugins et bibliothèques. <strong>Rigueur</strong> et <strong>sécurité</strong> sont mes priorités lorsque je code.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/microphone.png' alt='Icone Microphone &copy; Freepik'>
+              <img src='./assets/images/icons/microphone.png' alt='Icone Microphone &copy; Freepik' title='Icone Microphone &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Communication</h3>
             <div class='content'>
               <p>Un don et une malédiction diront certains, je suis tout à fait à l'aise avec la communication orale, téléphonique ou même écrite, j'aime communiquer et partager avec autrui. Je pratique, en grande partie, cela par le biais de vidéos publiées sur <a href='http://youtube.com/c/mrtheinsane'>YouTube</a>.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/gears.png' alt='Icone Rouages &copy; Vectors Market'>
+              <img src='./assets/images/icons/gears.png' alt='Icone Rouages &copy; Vectors Market' title='Icone Rouages &copy; Vectors Market'>
               <figcaption>Icons made by <a href='http://www.flaticon.com/authors/vectors-market' title='Vectors Market'>Vectors Market</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Développement Mobile</h3>
             <div class='content'>
               <p>Débutant dans ce domaine au sein de l'entreprise <a href='http://ubidreams.com/'><strong>Ubidreams</strong></a> dans laquelle je travaille depuis <span title='le 03 avril 2017' data-since='03/04/2017'>le 03 avril 2017</span> ou j'ai commencé comme stagiaire. Je suis formé aux <strong>technologies hybrides</strong> de React avec <a href='https://facebook.github.io/react-native/'><strong>React Native</strong></a> et <a href='https://facebook.github.io/react/'><strong>React JS</strong></a>.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/chip.png' alt='Icone Processeur &copy; Freepik'>
+              <img src='./assets/images/icons/chip.png' alt='Icone Processeur &copy; Freepik' title='Icone Processeur &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Électronique</h3>
             <div class='content'>
               <p>J'ai toujours un <strong>tournevis</strong> dans la poche pour comprendre comment fonctionnent les choses. <strong>Démonter</strong>, <strong>nettoyer</strong>, <strong>réparer</strong> et <strong>entretenir</strong> de (vieux) appareils électroniques et informatiques est un passe-temps pour moi, j'adore ça, malgré ma maladresse à qui je dois de belles blessures.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/pen.png' alt='Icone Crayon &copy; Freepik'>
+              <img src='./assets/images/icons/pen.png' alt='Icone Crayon &copy; Freepik' title='Icone Crayon &copy; Freepik'>
               <figcaption>Icons made by <a href='http://www.freepik.com' title='Freepik'>Freepik</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Graphisme</h3>
             <div class='content'>
               <p>Je voulais être <strong>dessinateur</strong> quand je serai grand. Mon passe-temps d'enfance a évolué en <strong>activité infographique</strong>. Aujourd'hui, en pratiquant une <strong>veille régulière</strong>, je me tiens à proximité des <strong>innovations graphiques</strong>, me permettant ainsi de rester à la page et d'entretenir ma <strong>passion d'enfance</strong>.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
           <li>
             <figure>
-              <img src='./assets/images/icons/servers.png' alt='Icone Serveurs &copy; Madebyoliver'>
+              <img src='./assets/images/icons/servers.png' alt='Icone Serveurs &copy; Madebyoliver' title='Icone Serveurs &copy; Madebyoliver'>
               <figcaption>Icons made by <a href='http://www.flaticon.com/authors/madebyoliver' title='Madebyoliver'>Madebyoliver</a> from <a href='http://www.flaticon.com' title='Flaticon'>www.flaticon.com</a> is licensed by <a href='http://creativecommons.org/licenses/by/3.0/' title='Creative Commons BY 3.0' target='_blank'>CC 3.0 BY</a></figcaption>
             </figure>
             <h3>Systèmes et réseaux</h3>
             <div class='content'>
               <p>Tous bons informaticiens (incluant les développeurs) devraient connaître leurs outils, selon moi. J'ai, pendant 5 ans, suivi des études (BAC et BTS) dans le domaine de la <strong>télécommunication</strong> et <strong>réseaux informatiques</strong>. J'ai donc de l'expérience et des compétences dans le domaine des <strong>serveurs</strong> et de la <strong>sécurité informatique</strong>.</p>
             </div>
-            <a data-smooth='true' href='#projects' class='button'>Exemple de travaux</a>
+            <a title='Exemples de travaux' data-smooth='true' href='#projects' class='button'>Exemples de travaux</a>
           </li>
         </ul>
       </article>
@@ -134,7 +155,7 @@
         <ul>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/diy_nds/thumb.jpg' alt='Nintendo DS'>
+              <img src='./assets/images/projects/diy_nds/thumb.jpg' alt='Nintendo DS' title='Nintendo DS'>
               <figcaption>
                 <h3>Réparation d'une Nintendo DS Lite</h3>
                 <p>Vidéo de tutoriel en anglais</p>
@@ -147,7 +168,7 @@
               </div>
               <div class='content'>
                 <div class='fluid-container'>
-                  <iframe width='560' height='315' data-src='https://www.youtube.com/embed/w6Wd_wtrXdo?ecver=1' frameborder='0' allowfullscreen></iframe>
+                  <object width='560' height='315' data-data='https://www.youtube.com/embed/w6Wd_wtrXdo?ecver=1'></object>
                 </div>
                 <p>Cette vidéo est un examen d'anglais à propos du concept de 'Do It Yourself' ou comment faire des choses par soi-même. La règle de cet examen était d'avoir une vidéo d'une durée <strong>2:30 au maximum</strong> avec une <strong>prise de parole tout au long de la vidéo</strong>.</p>
                 <p>Dans cette vidéo, en anglais, j'y explique ainsi comment remplacer <strong>la coque cassée d'une Nintendo DS Lite</strong> par une neuve étapes par étapes.</p>
@@ -156,7 +177,7 @@
           </li>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/tetris_party/thumb.jpg' alt='Tetris Party'>
+              <img src='./assets/images/projects/tetris_party/thumb.jpg' alt='Tetris Party' title='Tetris Party'>
               <figcaption>
                 <h3>Tetris Party</h3>
                 <p>Jeu de tetris fait en Canvas</p>
@@ -169,17 +190,18 @@
               </div>
               <div class='content'>
                 <div class='fluid-container'>
-                  <iframe width='560' height='315' data-src='./assets/documents/tetris_party' frameborder='0' allowfullscreen></iframe>
+                  <object width='560' height='315' data-data='./assets/documents/tetris_party'></object>
                 </div>
                 <p>Tetris Party est un jeu que j'ai conçu lors de mon année en <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a> dans le cadre d'un examen. Il utilise le Canvas de HTML5 couplé à la bibliothèque CreateJS permettant de le manipuler facilement.</p>
                 <p>Les règles sont simples, remplissez un maximum la forme qui se trouve au fond pour gagner le plus de points et passez vers le niveau suivant.</p>
                 <p>Bien qu'il ne soit pas terminé, ce projet m'a permis de me faire la main sur Canvas HTML5.</p>
+                <p><a title='Ouvrir en plein écran' href='./assets/documents/tetris_party' class='button purple' target='_blank' rel='noopener noreferrer'>Ouvrir en plein écran</a></p>
               </div>
             </div>
           </li>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/open_game/thumb.jpg' alt='Open Game'>
+              <img src='./assets/images/projects/open_game/thumb.jpg' alt='Open Game' title='Open Game'>
               <figcaption>
                 <h3>Open Game</h3>
                 <p>L'actualité ouverte du jeu vidéo</p>
@@ -192,18 +214,18 @@
               </div>
               <div class='content'>
                 <div class='fluid-container'>
-                  <iframe width='560' height='315' data-src='https://www.youtube.com/embed/J5Bflzi9FUk?ecver=1' frameborder='0' allowfullscreen></iframe>
+                  <object width='560' height='315' data-data='https://www.youtube.com/embed/J5Bflzi9FUk?ecver=1'></object>
                 </div>
                 <p>Open Game est un site sur lequel vous retrouverez l'univers vidéo-ludique par des aspects très divers au travers d'articles, news, tests et vidéos. C'est l'endroit où vous pourrez vous rendre pour vous informer, vous amuser et vous divertir !</p>
                 <p>Ce site est mon premier projet personnel dans le domaine du web que j'ai développé en apprenant de manière autodidacte sans le moindre framework ou base préconçue, il comporte une partie membres, un espace de commentaires, un créateur d'articles et un gestionnaire de messagerie interne.</p>
                 <p>Si la création d'un tel <strong>gestionnaire de contenu (CMS)</strong> m'a demandé du temps, il n'en reste pas moins un excellent point de départ dans le monde du web puisqu'il s'agit là du site qui m'a fait apprendre le <strong>HTML</strong>, le <strong>CSS</strong>, le <strong>Javascript</strong>, le <strong>SQL</strong> ainsi le <strong>PHP</strong>.</p>
-                <p><a href='http://openga.me' class='button purple'>Consulter le site</a></p>
+                <p><a title='Consulter le site' href='http://openga.me' class='button purple'>Consulter le site</a></p>
               </div>
             </div>
           </li>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/kaboom/thumb.jpg' alt='Kaboom Maroquinerie'>
+              <img src='./assets/images/projects/kaboom/thumb.jpg' alt='Kaboom Maroquinerie' title='Kaboom Maroquinerie'>
               <figcaption>
                 <h3>Kaboom Maroquinerie</h3>
                 <p>Site E-Commerce d'une artisane</p>
@@ -216,16 +238,16 @@
               </div>
               <div class='content'>
                 <p>Ce site de E-Commerce a été l'un des deux projets confiés à mon équipe et moi-même dans le cadre des projets tuteurés de <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a>.</p>
-                <img class='mockup' src='./assets/images/projects/kaboom/mockup.png' alt='Mockup Kaboom'>
+                <img class='mockup' src='./assets/images/projects/kaboom/mockup.png' alt='Mockup Kaboom' title='Mockup Kaboom'>
                 <p>Ce projet a été très formateur pour moi ainsi que pour mon équipe puisqu'il s'agissait là de notre première expérience avec de vrais clients accompagnés de leurs besoins et leurs demandes aussi complexes que farfelu(e)s (sans offenses bien-sûr). C'était notamment la première fois que nous pouvions pratiquer les <strong>méthodes agiles</strong> pour travailler de la manière la plus organisée possible.</p>
                 <p>Ce site a pour objectif de présenter la micro-entreprise Kaboom Maroquinerie basée sur la Rochelle au travers d'un <strong>site vitrine</strong> ainsi qu'une <strong>partie commerciale</strong> permettant d'étendre sa clientèle à un plus large public. Le site a été conçu sous <strong>Wordpress</strong> pour la partie vitrine, la partie <strong>e-commerciale</strong> a été faite sous <strong>WooCommerce</strong>.</p>
-                <p><a href='http://www.kaboom-maroquinerie.fr/' class='button purple'>Consulter le site</a></p>
+                <p><a title='Consulter le site' href='http://www.kaboom-maroquinerie.fr/' class='button purple'>Consulter le site</a></p>
               </div>
             </div>
           </li>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/my_tradeshow/thumb.jpg' alt='My Tradeshow'>
+              <img src='./assets/images/projects/my_tradeshow/thumb.jpg' alt='My Tradeshow' title='My Tradeshow'>
               <figcaption>
                 <h3>My Tradeshow</h3>
                 <p>L'application de salons connectés</p>
@@ -238,13 +260,13 @@
               </div>
               <div class='content error'>
                 <p>Ce projet est en cours de réalisation chez Ubidreams et n'est, à l'heure actuelle, pas montrable au public.</p>
-                <p class='center'><img src='./assets/images/projects/my_tradeshow/sad.png' alt='Triste'></p>
+                <p class='center'><img src='./assets/images/projects/my_tradeshow/sad.png' alt='Triste' title='Triste'></p>
               </div>
             </div>
           </li>
           <li>
             <figure data-popup='true'>
-              <img src='./assets/images/projects/artchante/thumb.jpg' alt='ArtChante'>
+              <img src='./assets/images/projects/artchante/thumb.jpg' alt='ArtChante' title='ArtChante'>
               <figcaption>
                 <h3>ArtChante</h3>
                 <p>Site de réservation de cours en ligne</p>
@@ -257,10 +279,10 @@
               </div>
               <div class='content'>
                 <p>Ce site de E-Commerce a été l'un des deux projets confiés à mon équipe et moi-même dans le cadre des projets tuteurés de <a href='http://sciences.univ-larochelle.fr/lp-creation-multimedia'><strong title='LPCM'>Licence Professionnelle Création Multimédia</strong></a>.</p>
-                <img class='mockup' src='./assets/images/projects/artchante/mockup.png' alt='Mockup ArtChante'>
+                <img class='mockup' src='./assets/images/projects/artchante/mockup.png' alt='Mockup ArtChante' title='Mockup ArtChante'>
                 <p>Ce projet a été très formateur pour moi ainsi que pour mon équipe puisqu'il s'agissait là de notre première expérience avec de vrais clients accompagnés de leurs besoins et leurs demandes aussi complexes que farfelu(e)s (sans offenses bien-sûr). C'était notamment la première fois que nous pouvions pratiquer les <strong>méthodes agiles</strong> pour travailler de la manière la plus organisée possible.</p>
                 <p>Ce site a pour objectif de présenter l'école de piano et chant ArtChanté basée sur la Rochelle au travers d'un <strong>site vitrine</strong> ainsi qu'une partie de <strong>réservation des cours en ligne</strong> pour les élèves. Le site a été conçu sous <strong>Wordpress</strong> pour la partie vitrine, la partie réservation a été réalisée et pensée par mes collègues et moi-même.</p>
-                <p><a href='http://www.artchante.fr/' class='button purple'>Consulter le site</a></p>
+                <p><a title='Consulter le site' href='http://www.artchante.fr/' class='button purple'>Consulter le site</a></p>
               </div>
             </div>
           </li>
@@ -272,7 +294,7 @@
   <!-- Footer -->
   <footer role='contentinfo' itemscope itemtype='http://schema.org/WPFooter'>
     <p>Une question, envie de discuter ?</p>
-    <a class='button' href='mailto:clement(dot)moine86(at)gmail(dot)com'>Contactez-moi</a>
+    <a title='Contactez-moi' class='button' href='mailto:clement(dot)moine86(at)gmail(dot)com'>Contactez-moi</a>
     <form method='get' action='./assets/documents/clement_moine_cv.pdf'>
       <button title='Télécharger mon Curriculum Vitae'>Curriculum Vitae</button>
     </form>
@@ -281,31 +303,31 @@
     <nav role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
       <ul>
         <li>
-          <a itemprop='url' href='https://twitter.com/mrtheinsane' target='_blank' rel='noopener noreferrer'>
+          <a title='Twitter' itemprop='url' href='https://twitter.com/mrtheinsane' target='_blank' rel='noopener noreferrer'>
             <span class='icon'><i class='fa fa-twitter' aria-hidden='true'></i></span>
             <span itemprop='name'>Twitter</span>
           </a>
         </li>
         <li>
-          <a itemprop='url' href='https://www.facebook.com/cmoine86' target='_blank' rel='noopener noreferrer'>
+          <a title='Facebook' itemprop='url' href='https://www.facebook.com/cmoine86' target='_blank' rel='noopener noreferrer'>
             <span class='icon'><i class='fa fa-facebook' aria-hidden='true'></i></span>
             <span itemprop='name'>Facebook</span>
           </a>
         </li>
         <li>
-          <a itemprop='url' href='http://fr.linkedin.com/in/clemmoine' target='_blank' rel='noopener noreferrer'>
+          <a title='LinkedIn' itemprop='url' href='http://fr.linkedin.com/in/clemmoine' target='_blank' rel='noopener noreferrer'>
             <span class='icon'><i class='fa fa-linkedin' aria-hidden='true'></i></span>
             <span itemprop='name'>LinkedIn</span>
           </a>
         </li>
         <li>
-          <a itemprop='url' href='https://github.com/clemMoine' target='_blank' rel='noopener noreferrer'>
+          <a title='GitHub' itemprop='url' href='https://github.com/clemMoine' target='_blank' rel='noopener noreferrer'>
             <span class='icon'><i class='fa fa-github-alt' aria-hidden='true'></i></span>
             <span itemprop='name'>GitHub</span>
           </a>
         </li>
         <li>
-          <a itemprop='url' href='https://www.youtube.com/user/MisterTheInsane' target='_blank' rel='noopener noreferrer'>
+          <a title='YouTube' itemprop='url' href='https://www.youtube.com/user/MisterTheInsane' target='_blank' rel='noopener noreferrer'>
             <span class='icon'><i class='fa fa-youtube-play' aria-hidden='true'></i></span>
             <span itemprop='name'>YouTube</span>
           </a>
@@ -315,13 +337,22 @@
   </footer>
 
   <!-- Fichiers de scripts Javascript -->
-  <script src='https://cdn.jsdelivr.net/momentjs/2.18.1/moment-with-locales.min.js'></script>
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+  <script src='https://cdn.jsdelivr.net/momentjs/2.18.1/moment-with-locales.min.js'></script>
+  <script src='./assets/javascript/jquery.touchSwipe.min.js'></script>
   <!--[if lt IE 9]><script src='https://cdn.jsdelivr.net/g/respond@1.4.2,html5shiv@3.7.3'></script><![endif]-->
 
-  <!-- touchSwipe -->
-  <script src="./assets/javascript/jquery.touchSwipe.min.js"></script>
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-79652980-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 
+  <!-- Script principal -->
   <script src='./assets/javascript/main.js'></script>
 </body>
 </html>
