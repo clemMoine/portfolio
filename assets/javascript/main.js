@@ -8,6 +8,7 @@ jQuery(document).ready(function() {
   smoothScroll();
   sinceDate();
   popup();
+  emailObfuscate();
 });
 
 // Lors du redimensionnement de la fenêtre
@@ -77,7 +78,14 @@ function menuButtonColor() {
   // Scroll au dessus de la section ?
   const hoverPresentation = (scroll >= presentationOffset.top - 60 && scroll <= presentationOffset.bottom)
 
-  if (hoverPresentation) {
+  // Offset Top / Bottom de la section.projects
+  var projectsOffset = $('.projects').offset();
+  projectsOffset.bottom = $('.projects').innerHeight() + projectsOffset.top;
+
+  // Scroll au dessus de la section ?
+  const hoverProjects = (scroll >= projectsOffset.top - 60 && scroll <= projectsOffset.bottom)
+
+  if (hoverPresentation || hoverProjects) {
     $('button.menu').addClass('purple');
   } else {
     $('button.menu').removeClass('purple');
@@ -131,4 +139,15 @@ function popup() {
       });
     }
   })
+}
+
+
+/**
+ * Permet des des-offusquer l'adresse e-mail et de la rendre lisible
+**/
+function emailObfuscate() {
+  $('a[href^="mailto:"]').each(function() {
+    // Transforme les (at) en @ et les (dot) en .
+    this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+  });
 }

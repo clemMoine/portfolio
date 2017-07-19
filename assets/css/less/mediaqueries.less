@@ -67,11 +67,32 @@
           }
         }
       }
+
+      &.skills {
+        article ul {
+          .flex-direction(column);   
+
+          li {
+           .flex(1);
+          }       
+        }
+      }
+
       &.projects {
         ul {
           .flex-direction(column);
+
+          li {
+           .flex(1);
+          }
         }
       }
+    }
+  }
+
+  .popup {
+    .header, .content {
+      width: 90%;
     }
   }
 
