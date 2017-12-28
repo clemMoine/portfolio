@@ -219,10 +219,41 @@ main {
         }
       }
 
-      img {
+      .flip {
         .flex(0 1 250px);
-        width: 250px;
-        height: 100%;
+        min-height: 250px;
+        min-width: 250px;
+        position: relative;
+
+        img {
+          .transition(all 1s ease);
+          .transform-style(preserve-3d);
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          width: 250px;
+          min-height: 250px;
+          height: 100%;
+          position: absolute;
+          left: 0; right: 0; bottom: 0; top: 0;
+
+          &:first-of-type {
+            z-index: 2;
+          }
+
+          &:last-of-type {
+            .transform(rotateY( 180deg ));
+          }
+        }
+
+        &:hover {
+          img:first-of-type {
+            .transform(rotateY( 180deg ));
+          }
+
+          img:last-of-type {
+            .transform(rotateY( 0deg ));
+          }
+        }        
       }
 
       h3 {
