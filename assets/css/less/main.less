@@ -308,29 +308,21 @@ main {
           .flex-wrap(wrap);
           .flex-direction(row);
           .justify-content(center);
+          margin: -1em;
 
           li {
-            .flex(1 1 (100%/3));
+            .flex(1 1  ~'calc('(100%/3)~' - 2em)');
             .flex-display;
             .flex-direction(column);
             .align-items(center);
             .justify-content(space-between);
-            margin-bottom: 3em;
+            margin: 1em;
+            padding: 1em;
             vertical-align: top;
             box-sizing: border-box;
             text-align: center;
-
-            &:not(:first-of-type):not(:last-of-type) {
-              .padding-horizontal(1em);
-            }
-
-            &:first-of-type {
-              padding-right: 1em;
-            }
-
-            &:last-of-type {
-              padding-left: 1em;
-            }
+            border: 1px solid;
+            border-radius: 3px;
 
             div.content {
               .flex(1);
@@ -376,6 +368,30 @@ main {
     }
 
     &.projects {
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &:before {
+        .opacity(.8);
+        background-color: #fff;
+        z-index: -1;
+      }
+
+      &:after {
+        background-image: @presentation-background;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -2;
+      }
+
       ul {
         .flex-display;
         .flex-wrap(wrap);
@@ -383,7 +399,7 @@ main {
         .justify-content(center);
 
         li {
-          .flex(1 1 (100%/3));
+          .flex(0 1 (100%/3));
           .flex-display;
           .flex-direction(column);
           .align-items(center);
@@ -402,7 +418,7 @@ main {
             }
 
             img {
-              .grayscale(100%);
+              // .grayscale(100%);
               .transition(all 200ms);
               width: 100%;
               height: auto;
@@ -421,7 +437,7 @@ main {
               left: 0;
               right: 0;
               bottom: 0;
-              background-color: fade(@blue, 70%);
+              background-color: fade(@purple-darker, 90%);
               color: @white;
               cursor: pointer;
               text-align: center;
