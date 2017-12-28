@@ -10,6 +10,7 @@ jQuery(document).ready(function() {
   popup();
   emailObfuscate();
   swipeMenu();
+  shuffleProjects();
 });
 
 // Lors du redimensionnement de la fenêtre
@@ -41,6 +42,13 @@ function mobileMenu() {
 function heightHeader() {
   const vh = $(window).height();
   $('header').height(vh)
+}
+
+/**
+ * Permet de randomiser l'ordre des projets
+**/
+function shuffleProjects() {
+  $('section.projects ul li').shuffle();
 }
 
 /**
