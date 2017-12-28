@@ -21,6 +21,7 @@ jQuery(window).resize(function() {
 // Lors du scroll de la fenêtre
 jQuery(window).scroll(function() {
   menuButtonColor();
+  activeSection();
 });
 
 /**
@@ -60,6 +61,8 @@ function smoothScroll() {
 
     let target = this.getAttribute('href');
     target = (target == '#') ? 'body' : target;
+    target = (target == '#contact') ? 'footer' : target;
+
     const offset = $(target).offset().top;
 
     // Scroll fluide
@@ -102,6 +105,35 @@ function menuButtonColor() {
     $('button.menu').removeClass('purple');
   }
 }
+
+/**
+ * Permet de changer la section active au survol de cette dernière
+**/
+function activeSection() {
+  const scroll = $(window).scrollTop();
+
+  // Récupération des liens internes
+  const links = $('nav ul li a[data-smooth]');
+
+  // Pour chaque liens de la navigation interne
+  links.each(function(index, link) {
+    var target = $(link).attr('href');
+    target = (target == '#') ? 'header' : target;
+    target = (target == '#contact') ? 'footer' : target;
+
+    // Offset Top / Bottom de la section ciblée par le lien
+    var elementOffset = $(target).offset();
+    elementOffset.bottom = $(target).innerHeight() + elementOffset.top;
+    elementOffset.top -= $('nav').innerHeight();
+
+    // Scroll au dessus de la section ciblée par le lien ?
+    if (scroll >= elementOffset.top && scroll <= elementOffset.bottom) {
+      $(links).removeClass('active');
+      $(link).addClass('active');
+    }
+  })
+}
+
 
 /**
  * Permet de transformer une date en "ago" (ex: 03/04/2017 > 2 ans)
