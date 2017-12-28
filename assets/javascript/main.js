@@ -159,12 +159,11 @@ function emailObfuscate() {
 **/
 function swipeMenu() {
   $('header nav').swipe({
-      swipeStatus:function(event, phase, direction, distance, duration, fingers)
-          {
-              if (phase=="move" && direction =="left") {
-                   $(this).removeClass("open");
-                   return false;
-              }
-          }
+    swipeStatus: function(event, phase, direction, distance, duration, fingers) {
+      if (phase == 'move' && direction == 'left') {
+        $(this).removeClass('open');
+        return false;
+      }
+    }
   });
 }
