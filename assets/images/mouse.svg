@@ -1,7 +1,23 @@
-<svg data-name="Mouse SVG" id="mouse_svg" viewBox="0 0 35 75.44" xmlns="http://www.w3.org/2000/svg">
+<svg data-name="Mouse SVG" id="mouse_svg" viewBox="0 0 35 80.44" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .white { fill: #fff; }
+
+      #arrow_down {
+        -webkit-animation: arrow-down 2s infinite;
+        -webkit-transform-origin: 50% 50%;
+      }
+
+      @-webkit-keyframes arrow-down {
+        0%, 100%   {
+          transform: translateY(-5px);
+          opacity: .25;
+        }
+        50% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
     </style>
   </defs>
   <title>Mouse SVG</title>
@@ -9,5 +25,5 @@
     <path class="white" d="M17.5,0A17.5,17.5,0,0,0,0,17.5v18a17.5,17.5,0,0,0,35,0v-18A17.5,17.5,0,0,0,17.5,0ZM33,34.49a15.5,15.5,0,0,1-31,0v-16a15.5,15.5,0,1,1,31,0Z" id="mouse_edge"/>
     <circle class="white" cx="17.49" cy="14.08" data-name="Scroll Button" id="mouse_scroll" r="2.15" transform="translate(3.33 31.51) rotate(-89.73)"/>
   </g>
-  <path class="white" d="M30.43,62.11,23.3,69.32l-6.05,6.12L8.79,66.88h0L4.08,62.11a.88.88,0,0,1,0-1.22.85.85,0,0,1,1.2,0h0l12,12.1,12-12.1a.85.85,0,0,1,1.2,0h0A.87.87,0,0,1,30.43,62.11Z" data-name="Arrow Down" id="arrow_down"/>
+  <path class="white" d="M30.43,67.11,23.3,74.32l-6.05,6.12L8.79,71.88h0L4.08,67.11a.88.88,0,0,1,0-1.22.85.85,0,0,1,1.2,0h0l12,12.1,12-12.1a.85.85,0,0,1,1.2,0h0A.87.87,0,0,1,30.43,67.11Z" data-name="Arrow Down" id="arrow_down"/>
 </svg>
