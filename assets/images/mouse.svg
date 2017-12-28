@@ -1,39 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="75.44" viewBox="0 0 35 75.44">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""/>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?></metadata>
-<defs>
+<svg data-name="Mouse SVG" id="mouse_svg" viewBox="0 0 35 75.44" xmlns="http://www.w3.org/2000/svg">
+  <defs>
     <style>
-      .cls-1 {
-        fill: #fff;
-        fill-rule: evenodd;
-      }
+      .white { fill: #fff; }
     </style>
   </defs>
-  <path id="Mouse" class="cls-1" d="M1328.5,950a17.5,17.5,0,0,1,17.5,17.5v18.008a17.5,17.5,0,1,1-35,0V967.5A17.5,17.5,0,0,1,1328.5,950Zm0,3a15.51,15.51,0,0,1,15.5,15.519v15.969a15.5,15.5,0,1,1-31,0V968.519A15.51,15.51,0,0,1,1328.5,953Zm0,8.933a2.151,2.151,0,1,1-2.16,2.151A2.157,2.157,0,0,1,1328.5,961.933Zm12.93,50.177-7.13,7.21-6.05,6.12-8.46-8.56h0l-4.71-4.77a0.875,0.875,0,0,1,0-1.22,0.845,0.845,0,0,1,1.21,0l11.96,12.1,11.97-12.1a0.845,0.845,0,0,1,1.21,0A0.875,0.875,0,0,1,1341.43,1012.11Z" transform="translate(-1311 -950)"/>
+  <title>Mouse SVG</title>
+  <g data-name="Mouse Object" id="mouse_object">
+    <path class="white" d="M17.5,0A17.5,17.5,0,0,0,0,17.5v18a17.5,17.5,0,0,0,35,0v-18A17.5,17.5,0,0,0,17.5,0ZM33,34.49a15.5,15.5,0,0,1-31,0v-16a15.5,15.5,0,1,1,31,0Z" id="mouse_edge"/>
+    <circle class="white" cx="17.49" cy="14.08" data-name="Scroll Button" id="mouse_scroll" r="2.15" transform="translate(3.33 31.51) rotate(-89.73)"/>
+  </g>
+  <path class="white" d="M30.43,62.11,23.3,69.32l-6.05,6.12L8.79,66.88h0L4.08,62.11a.88.88,0,0,1,0-1.22.85.85,0,0,1,1.2,0h0l12,12.1,12-12.1a.85.85,0,0,1,1.2,0h0A.87.87,0,0,1,30.43,62.11Z" data-name="Arrow Down" id="arrow_down"/>
 </svg>
