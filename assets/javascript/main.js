@@ -4,7 +4,7 @@ const locale = navigator.language || navigator.userLanguage;
 // Lorsque le document est chargé
 jQuery(document).ready(function() {
   mobileMenu();
-  heightHeader();
+  fullHeightElements();
   smoothScroll();
   sinceDate();
   popup();
@@ -32,16 +32,16 @@ function mobileMenu() {
   });
 
   $('.overlay').click(function() {
-    $('header nav.open').removeClass('open')
+    $('header nav.open').removeClass('open');
   });
 }
 
 /**
  * Permet d'ajuster le 100vh CSS qui n'est pas toujours correct
 **/
-function heightHeader() {
+function fullHeightElements() {
   const vh = $(window).height();
-  $('header').height(vh)
+  $('header, footer').height(vh);
 }
 
 /**
