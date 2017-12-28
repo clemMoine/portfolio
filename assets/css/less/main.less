@@ -180,6 +180,7 @@ header {
 main {
   section {
     .padding-vertical(5em);
+    position: relative;
 
     article {
       .flex-display;
@@ -206,6 +207,30 @@ main {
       .align-items(center);
       .justify-content(center);
 
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &:before {
+        .opacity(.8);
+        background-color: #fff;
+        z-index: -1;
+      }
+
+      &:after {
+        background-image: @presentation-background;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -2;
+      }
+
       .details {
         .flex(1);
         .flex-display;
@@ -213,6 +238,9 @@ main {
         .justify-content(center);
         text-align: justify;
         margin-right: 2em;
+        background: #fff;
+        padding: 2em;
+        border-left: 3px solid @purple;
 
         a[href]:not(.button) {
           color: @purple;
