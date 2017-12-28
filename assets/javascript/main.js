@@ -75,16 +75,18 @@ function menuButtonColor() {
   // Offset Top / Bottom de la section.presentation
   var presentationOffset = $('.presentation').offset();
   presentationOffset.bottom = $('.presentation').innerHeight() + presentationOffset.top;
+  presentationOffset.top -= $('nav').innerHeight();
 
   // Scroll au dessus de la section ?
-  const hoverPresentation = (scroll >= presentationOffset.top - 60 && scroll <= presentationOffset.bottom)
+  const hoverPresentation = (scroll >= presentationOffset.top && scroll <= presentationOffset.bottom)
 
   // Offset Top / Bottom de la section.projects
   var projectsOffset = $('.projects').offset();
   projectsOffset.bottom = $('.projects').innerHeight() + projectsOffset.top;
+  projectsOffset.top -= $('nav').innerHeight();
 
   // Scroll au dessus de la section ?
-  const hoverProjects = (scroll >= projectsOffset.top - 60 && scroll <= projectsOffset.bottom)
+  const hoverProjects = (scroll >= projectsOffset.top && scroll <= projectsOffset.bottom)
 
   if (hoverPresentation || hoverProjects) {
     $('button.menu').addClass('purple');

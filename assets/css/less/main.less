@@ -25,9 +25,9 @@ a {
 }
 
 .wrapper {
+  .padding-horizontal(1em);
   max-width: 1200px;
   margin: 0 auto;
-  .padding-horizontal(1em);
 }
 
 img {
@@ -36,14 +36,14 @@ img {
 }
 
 a.button, button {
-  font-family: inherit;
   .appearance(none);
-  font-size: 1em;
-  font-weight: normal;
-  border: 1px solid @white;
   .border-radius(3px);
   .padding-vertical(.5em);
   .padding-horizontal(1em);
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: normal;
+  border: 1px solid @white;
   background: transparent;
   color: @white;
 
@@ -80,20 +80,18 @@ nav {
     .wrapper;
 
     li {
-      text-transform: uppercase;
-
       a {
         .flex-display;
         .align-items(center);
-        height: 60px;
         .padding-horizontal(15px);
+        height: 50px;
 
         &:hover, &.active {
           color: @yellow;
         }
 
         &[href]:hover {          
-          box-shadow: inset 0 -5px 0 @yellow;
+          box-shadow: inset 0 -3px 0 @yellow;
         }
       }
     }
@@ -123,8 +121,8 @@ header {
 
   &:before {
     .radial-gradient(@purple, @blue, top right);
-    z-index: -1;
     .opacity(.8);
+    z-index: -1;
   }
 
   &:after {
@@ -316,11 +314,11 @@ main {
             .flex-display;
             .flex-direction(column);
             .align-items(center);
+            .justify-content(space-between);
             margin-bottom: 3em;
             vertical-align: top;
             box-sizing: border-box;
             text-align: center;
-            .justify-content(space-between);
 
             &:not(:first-of-type):not(:last-of-type) {
               .padding-horizontal(1em);
@@ -416,6 +414,7 @@ main {
               .align-items(center);
               .flex-direction(column);
               .justify-content(center);
+              .transition(opacity 200ms);
               opacity: 0;
               position: absolute;
               top: 0;
@@ -426,7 +425,6 @@ main {
               color: @white;
               cursor: pointer;
               text-align: center;
-              .transition(opacity 200ms);
 
               h3 {
                 color: inherit;
@@ -442,16 +440,16 @@ main {
 
 // Popup
 .popup {
+  .flex-display;
+  .align-items(center);
+  .flex-direction(column);
+  .justify-content(center);
   position: fixed;
   left: 0;
   right: 0;
   bottom: 100%;
   top: -100%;
   opacity: 0;
-  .flex-display;
-  .align-items(center);
-  .flex-direction(column);
-  .justify-content(center);
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 100;
 
@@ -588,9 +586,9 @@ footer {
   }
 
   &:before {
+    .opacity(.8);
     .radial-gradient(@purple, @blue);
     z-index: -1;
-    .opacity(.8);
   }
 
   &:after {
