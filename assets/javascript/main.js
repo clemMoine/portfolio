@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 
 // Lors du redimensionnement de la fenêtre
 jQuery(window).resize(function() {
-  heightHeader();
+  fullHeightElements();
 });
 
 // Lors du scroll de la fenêtre
