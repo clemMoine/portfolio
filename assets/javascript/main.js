@@ -29,11 +29,16 @@ jQuery(window).scroll(function() {
 **/
 function mobileMenu() {
   $('button.menu').click(function(e) {
-    $('header nav').toggleClass('open');
+    $('header nav').toggleClass('open animating');
+
+    // Blocage de la fermeture le temps de la transition
+    $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+      $('header nav').removeClass('animating');
+    })
   });
 
   $('.overlay').click(function() {
-    $('header nav.open').removeClass('open');
+    $('header nav.open:not(.animating)').removeClass('open');
   });
 }
 
@@ -203,6 +208,29 @@ function swipeMenu() {
       if (phase == 'move' && direction == 'left') {
         $(this).removeClass('open');
         return false;
+      }
+    }
+  });
+  $('.overlay').swipe({
+    swipeStatus: function(event, phase, direction, distance, duration, fingers) {
+      // Déplacement
+      if (phase == 'move') {
+        // Déplacement vers la gauche
+        if (direction == 'right') {
+          // Ouverture du drawer
+          $('header nav').addClass('open animating');
+
+          // Blocage de la fermeture le temps de la transition
+          $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+            $('header nav').removeClass('animating');
+          })
+          return false;
+        // Déplacement vers la droite
+        } else if (direction == 'left') {
+          // Fermeture du drawer
+          $('header nav.open:not(.animating)').removeClass('open');
+          return false;
+        }
       }
     }
   });
