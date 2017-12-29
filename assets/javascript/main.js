@@ -223,25 +223,17 @@ function emailObfuscate() {
  * Permet de fermer le menu en faisant glisser
 **/
 function swipeMenu() {
-  $('header nav').swipe({
-    swipeStatus: function(event, phase, direction, distance, duration, fingers) {
-      if (phase == 'move' && direction == 'left') {
-        $(this).removeClass('open');
-        return false;
-      }
-    }
-  });
-  $('.overlay').swipe({
-    swipeStatus: function(event, phase, direction, distance, duration, fingers) {
+  $('.overlay, header nav').swipe({
+    swipeStatus: (event, phase, direction, distance, duration, fingers) => {
       // Déplacement
       if (phase == 'move') {
         // Déplacement vers la gauche
         if (direction == 'right') {
           // Ouverture du drawer
-          $('header nav').addClass('open animating');
+          $('header nav:not(.open)').addClass('open animating');
 
           // Blocage de la fermeture le temps de la transition
-          $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+          $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
             $('header nav').removeClass('animating');
           })
           return false;
