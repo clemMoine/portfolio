@@ -1,8 +1,11 @@
-// Langue locale du navigateur
-const locale = navigator.language || navigator.userLanguage;
+// Variables globales
+const defaultNavHeight = 50; // Taille de la barre de navigation lorsque l'on ne la calcule pas
+const locale = navigator.language || navigator.userLanguage; // Langue locale du navigateur
+let mobileDisplay, scrollOffset; // Initialisation de variables
 
 // Lorsque le document est chargé
 jQuery(document).ready(function() {
+  updateVar();
   mobileMenu();
   fullHeightElements();
   smoothScroll();
@@ -15,14 +18,27 @@ jQuery(document).ready(function() {
 
 // Lors du redimensionnement de la fenêtre
 jQuery(window).resize(function() {
+  updateVar();
   fullHeightElements();
 });
 
 // Lors du scroll de la fenêtre
 jQuery(window).scroll(function() {
+  updateVar();
   menuButtonColor();
   activeSection();
 });
+
+/**
+ * Permet de mettre à jour les variables globales
+**/
+function updateVar() {
+  scrollOffset = {
+    top: $(window).scrollTop(),
+    bottom: $(window).scrollTop() + $(window).height()
+  };
+  mobileDisplay = ($(window).width() <= 700);
+}
 
 /**
  * Gestion du menu mobile
@@ -86,23 +102,29 @@ function smoothScroll() {
  * Bouton changeant de mode en fonction de la section survolée
 **/
 function menuButtonColor() {
-  const scroll = $(window).scrollTop();
-
   // Offset Top / Bottom de la section.presentation
-  var presentationOffset = $('.presentation').offset();
+  let presentationOffset = $('.presentation').offset();
   presentationOffset.bottom = $('.presentation').innerHeight() + presentationOffset.top;
-  presentationOffset.top -= $('nav').innerHeight();
+  presentationOffset.top -= mobileDisplay ? defaultNavHeight : $('nav').innerHeight();
 
   // Scroll au dessus de la section ?
-  const hoverPresentation = (scroll >= presentationOffset.top && scroll <= presentationOffset.bottom)
+  const hoverPresentation = (scrollOffset.top >= presentationOffset.top && scrollOffset.top <= presentationOffset.bottom);
 
   // Offset Top / Bottom de la section.projects
-  var projectsOffset = $('.projects').offset();
+  let projectsOffset = $('.projects').offset();
   projectsOffset.bottom = $('.projects').innerHeight() + projectsOffset.top;
-  projectsOffset.top -= $('nav').innerHeight();
+  projectsOffset.top -= mobileDisplay ? defaultNavHeight : $('nav').innerHeight();
 
   // Scroll au dessus de la section ?
-  const hoverProjects = (scroll >= projectsOffset.top && scroll <= projectsOffset.bottom)
+  const hoverProjects = (scrollOffset.top >= projectsOffset.top && scrollOffset.top <= projectsOffset.bottom);
+
+  // Debug
+  // console.clear();
+  // console.log(
+  //   'scroll offset: ', scrollOffset.top ,':', scrollOffset.bottom ,' | ',
+  //   'projets offset: ', projectsOffset.top ,':', projectsOffset.bottom ,' | ',
+  //   'presentation offset: ', presentationOffset.top ,':', presentationOffset.bottom
+  // );
 
   if (hoverPresentation || hoverProjects) {
     $('button.menu').addClass('purple');
@@ -115,8 +137,6 @@ function menuButtonColor() {
  * Permet de changer la section active au survol de cette dernière
 **/
 function activeSection() {
-  const scroll = $(window).scrollTop();
-
   // Récupération des liens internes
   const links = $('nav ul li a[data-smooth]');
 
@@ -129,10 +149,10 @@ function activeSection() {
     // Offset Top / Bottom de la section ciblée par le lien
     var elementOffset = $(target).offset();
     elementOffset.bottom = $(target).innerHeight() + elementOffset.top;
-    elementOffset.top -= $('nav').innerHeight();
+    elementOffset.top -= mobileDisplay ? defaultNavHeight : $('nav').innerHeight();
 
     // Scroll au dessus de la section ciblée par le lien ?
-    if (scroll >= elementOffset.top && scroll <= elementOffset.bottom) {
+    if (scrollOffset.top >= elementOffset.top && scrollOffset.top <= elementOffset.bottom) {
       $(links).removeClass('active');
       $(link).addClass('active');
     }
