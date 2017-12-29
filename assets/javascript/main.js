@@ -44,16 +44,17 @@ function updateVar() {
  * Gestion du menu mobile
 **/
 function mobileMenu() {
-  $('button.menu').click(function(e) {
+  $('button.menu').click(() => {
+    // Ajout de la classe open et animating qui sert pour la durée de la transition
     $('header nav').toggleClass('open animating');
 
     // Blocage de la fermeture le temps de la transition
-    $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+    $('header nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
       $('header nav').removeClass('animating');
-    })
+    });
   });
 
-  $('.overlay').click(function() {
+  $('.overlay').click(() => {
     $('header nav.open:not(.animating)').removeClass('open');
   });
 }
@@ -77,10 +78,12 @@ function shuffleProjects() {
  * Scroll fluide
 **/
 function smoothScroll() {
-  $('a[data-smooth]').click(function(e) {
-    e.preventDefault();
+  $('a[data-smooth]').click(function(event) {
+    event.preventDefault();
 
-    let target = this.getAttribute('href');
+    const { currentTarget } = event;
+
+    let target = currentTarget.getAttribute('href');
     target = (target == '#') ? 'body' : target;
     target = (target == '#contact') ? 'footer' : target;
 
@@ -141,13 +144,13 @@ function activeSection() {
   const links = $('nav ul li a[data-smooth]');
 
   // Pour chaque liens de la navigation interne
-  links.each(function(index, link) {
-    var target = $(link).attr('href');
+  links.each((index, link) => {
+    let target = $(link).attr('href');
     target = (target == '#') ? 'header' : target;
     target = (target == '#contact') ? 'footer' : target;
 
     // Offset Top / Bottom de la section ciblée par le lien
-    var elementOffset = $(target).offset();
+    let elementOffset = $(target).offset();
     elementOffset.bottom = $(target).innerHeight() + elementOffset.top;
     elementOffset.top -= mobileDisplay ? defaultNavHeight : $('nav').innerHeight();
 
@@ -167,7 +170,7 @@ function sinceDate() {
   // Changement de la locale pour correspondre à la langue du navigateur
   moment.locale(locale);
 
-  $('[data-since]').each(function(index, element) {
+  $('[data-since]').each((index, element) => {
     const since = $(element).data('since');
     const date = moment(since, 'DD-MM-YYYY');
     const agoDate = date.fromNow(true);
@@ -179,31 +182,33 @@ function sinceDate() {
  * Permet d'afficher des popups
 **/
 function popup() {
-  $('[data-popup]').on('click', function() {
+  $('[data-popup]').on('click', (event) => {
     // Popup cible
-    let popup = $(this).next('.popup');
+    const { currentTarget: target } = event;
+    const popup = $(target).next('.popup');
 
     // Ouvre la popup
     popup.toggleClass('active');
 
-    // Insertion du data pour charger uniquement si l'on ouvre la popup
-    $('object', popup).each(function(index, element) {
-      $(this).attr('data', $(this).data('data'));
+    // Insertion du data pour charger le contenu uniquement si l'on ouvre la popup
+    $('object', popup).each((index, object) => {
+      $(object).attr('data', $(object).data('data'));
     });
   });
 
-  $('.popup button.close, .popup').on('click', function(e) {
-    let target = $(e.target);
-    if (target.hasClass('popup') || target.hasClass('close')) {
-      let popup = $(target.closest('.popup'));
+  $('.popup button.close, .popup').on('click', (event) => {
+    const { currentTarget: target } = event;
 
-      popup.removeClass('active');
+    if ($(target).hasClass('popup') || $(target).hasClass('close')) {
+      const popup = $(target).closest('.popup');
 
-      // Suppression du data pour stopper le contenu de l'object
-      $('object', popup).each(function(index, element) {
-        $(this).removeAttr('data');
-        $(this).clone().appendTo($(this).closest('.fluid-container'));
-        $(this).remove();
+      $(popup).removeClass('active');
+
+      // Suppression du data pour stopper le contenu de l'object (vidéo en lecture par exemple)
+      $('object', popup).each((index, object) => {
+        $(object).removeAttr('data');
+        $(object).clone().appendTo($(object).closest('.fluid-container'));
+        $(object).remove();
       });
     }
   })
@@ -213,9 +218,9 @@ function popup() {
  * Permet des des-offusquer l'adresse e-mail et de la rendre lisible
 **/
 function emailObfuscate() {
-  $('a[href^="mailto:"]').each(function() {
+  $('a[href^="mailto:"]').each((index, anchor) => {
     // Transforme les (at) en @ et les (dot) en .
-    this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+    anchor.href = anchor.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
   });
 }
 
