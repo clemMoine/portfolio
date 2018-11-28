@@ -13,7 +13,7 @@
 
 body {
   font-family: @font;
-  color: @blue;
+  color: @text;
   font-weight: @font-weight;
   background-color: @background;
 }
@@ -128,7 +128,7 @@ header {
   }
 
   &:before {
-    .radial-gradient(@purple, @blue, top right);
+    .linear-gradient(~'-225deg, @{purple} 35%, @{blue}');
     .opacity(.8);
     z-index: -1;
   }
@@ -193,7 +193,7 @@ main {
       .flex-wrap(wrap);
       .flex-direction(row);
       .wrapper;
-      color: @blue;
+      color: @text;
       line-height: 1.75em;
 
       h2 {
@@ -612,7 +612,7 @@ footer {
 
   &:before {
     .opacity(.8);
-    .radial-gradient(@purple, @blue);
+    .linear-gradient(~'-225deg, @{purple} 35%, @{blue}');
     z-index: -1;
   }
 

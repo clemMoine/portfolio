@@ -15,11 +15,18 @@
 	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
 
-
 .radial-gradient (@innerColor: #555, @outerColor: #333, @pos: center, @colorStop: 100%)  {
     background-image: -moz-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // FF 3.6+
     background-image: -ms-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // IE10
     background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
     background-image: -webkit-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
     background-image: -o-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Opera 11.10
+}
+
+.linear-gradient( ... ) {
+	background-image: -webkit-linear-gradient(@arguments);
+	background-image: -moz-linear-gradient(@arguments);
+	background-image: -ms-linear-gradient(@arguments);
+	background-image: -o-linear-gradient(@arguments);
+	background-image: linear-gradient(@arguments);
 }
